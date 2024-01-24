@@ -1,3 +1,4 @@
+# IMPORTS
 import tkinter as tk
 from tkinter import ttk, messagebox
 from ttkbootstrap import Style
@@ -8,8 +9,10 @@ class TodoListApp(tk.Tk):
     def __init__(self):
         super().__init__()
 
+
+        # STYLING
         self.title("Todo List App")
-        self.geometry("600x400")
+        self.geometry("300x200")
         style = Style(theme="lumen")
         style.configure("Custom.TEntry", foreground="gray")
 
@@ -50,6 +53,9 @@ class TodoListApp(tk.Tk):
 
 
         self.load_tasks()
+
+
+    # METHODS
 
     def view_stats(self):
         done_count = 0
